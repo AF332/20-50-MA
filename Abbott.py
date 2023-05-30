@@ -42,10 +42,10 @@ plt.legend()
 plt.xlabel('Date')
 plt.ylabel('Price in Pounds')
 plt.title('Abbott')
-plt.show()
 
 plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval = 120))
 plt.gca().xaxis.set_tick_params(rotation = 30)
+plt.show()
 
 dataset2 = pd.read_csv(r'E:\3rd Year\Semester 1\Research and Development Skills\Project\J&J stock data.csv', index_col='Date', parse_dates=True)
 print(dataset2)
@@ -61,10 +61,25 @@ Sell2 = []
 for j in range (len(dataset2_2019)):
     if dataset2_2019.MA20.iloc[j] > dataset2_2019.MA50.iloc[j] \
     and dataset2_2019.MA20.iloc[j-1] < dataset2_2019.MA50.iloc[j-1]:
-        Buy.append(j)
+        Buy2.append(j)
     elif dataset2_2019.MA20.iloc[j] < dataset2_2019.MA50.iloc[j] \
     and dataset2_2019.MA20.iloc[j-1] > dataset2_2019.MA50.iloc[j-1]:
-        Sell.append(j)
+        Sell2.append(j)
 
-print(Buy)
-Print(Sell)
+print(Buy2)
+print(Sell2)
+
+plt.figure(figsize = (12,5))
+plt.plot(dataset2_2019['Adj Close'], label = 'Stock Price', color = 'blue', alpha = 0.5)
+plt.plot(dataset2_2019['MA20'], label = 'MA20', color = 'k', alpha = 0.5)
+plt.plot(dataset2_2019['MA50'], label = 'MA50', color = 'magenta', alpha = 0.5)
+plt.scatter(dataset2_2019.iloc[Buy2].index, dataset2_2019.iloc[Buy2]['Adj Close'], marker = '^', color = 'g', s = 100)
+plt.scatter(dataset2_2019.iloc[Sell2].index, dataset2_2019.iloc[Sell2]['Adj Close'], marker = 'v', color = 'r', s = 100)
+plt.legend()
+plt.xlabel('Date')
+plt.ylabel('Price in Pounds')
+plt.title('J&J')
+
+plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval = 120))
+plt.gca().xaxis.set_tick_params(rotation = 30)
+plt.show()
