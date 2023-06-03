@@ -5,10 +5,13 @@ import pandas as pd # For data frames
 import io
 import requests
 import matplotlib.dates as mdates
+import yfinance as yf
 
 # Abbott data set taken downloaded from yahoo finance is read through python
-dataset = pd.read_csv(r'E:\3rd Year\Semester 1\Research and Development Skills\Project\Abbott stock data.csv', index_col='Date', parse_dates=True) # Data read using directory path and first column used as the dates instead of its index and also parsed
-print(dataset) # Dataset is printed to show functionality
+start = '2019-08-01'
+end = '2022-08-01'
+dataset = yf.download('0Q15.IL', start, end)
+print(dataset)
 
 # New columns are added into the dataset
 dataset['MA20'] = dataset['Adj Close'].rolling(20).mean() # MA20 column is added in and calculated by rolling over the adjusted close column with a window of 20 days and the mean is then calculated. Hence explains why the first 20 data points will not porvide any numbers.
