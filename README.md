@@ -18,6 +18,8 @@ A Long Short-Term Memory (LSTM) model was constructed using a sequential archite
 Model Evaluation
 
 The model’s performance was rigorously evaluated using metrics such as Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE). After training for 50 epochs, the model achieved an MAE of approximately 1.872 and an RMSE of approximately 2.016, validating the model's accuracy in predicting stock prices. These metrics helped quantify the accuracy of predictions, ensuring the model's reliability.
+![image](https://github.com/user-attachments/assets/a4b045f3-02bb-4be7-b8ff-1883a8232766)
+
 
 Visualization and Interactive Application
 
@@ -26,6 +28,8 @@ Dynamic visualisations were created using Plotly, illustrating both the technica
 Results
 
 The predictive model demonstrated high accuracy, closely mirroring actual stock movements as seen in the plotted results. The actual vs. predicted price graph for Abbott showcases the model’s ability to capture significant price trends and reversals, while the stock analysis graph with technical indicators confirms the model's competency in utilising these metrics for successful price prediction.
+![image](https://github.com/user-attachments/assets/0f26722e-8e7e-4ec2-9cae-688e62d9477d)
+![image](https://github.com/user-attachments/assets/74f85851-bdd2-415d-95ba-1220dbad25af)
 
 Conclusion
 
