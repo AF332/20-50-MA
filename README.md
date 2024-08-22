@@ -11,6 +11,8 @@ Feature Engineering and Technical Analysis
 
 The implementation of technical indicators such as Moving Averages (MA20, MA50), Exponential Moving Averages (EMA12, EMA26), Moving Average Convergence Divergence (MACD), and Bollinger Bands provided a nuanced view of market trends and volatility. These indicators were pivotal for determining optimal buy and sell points within the stock’s price history, enhancing the strategy’s reactive capability to market conditions.
 
+![image](https://github.com/user-attachments/assets/0f26722e-8e7e-4ec2-9cae-688e62d9477d)
+
 Predictive Modeling with LSTM
 
 A Long Short-Term Memory (LSTM) model was constructed using a sequential architecture to predict future price movements based on historical data. The model was trained with features including open, high, low, close prices, volume, and technical indicators, ensuring a robust learning process with nuances captured in historical trends.
@@ -29,8 +31,6 @@ Dynamic visualisations were created using Plotly, illustrating both the technica
 Results
 
 The predictive model demonstrated high accuracy, closely mirroring actual stock movements as seen in the plotted results. The actual vs. predicted price graph for Abbott showcases the model’s ability to capture significant price trends and reversals, while the stock analysis graph with technical indicators confirms the model's competency in utilising these metrics for successful price prediction.
-
-![image](https://github.com/user-attachments/assets/0f26722e-8e7e-4ec2-9cae-688e62d9477d)
 
 ![image](https://github.com/user-attachments/assets/74f85851-bdd2-415d-95ba-1220dbad25af)
 
